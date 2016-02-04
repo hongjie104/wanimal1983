@@ -100,7 +100,7 @@ def fetch(pageNum, cookies = {}):
 	response = requests.get(url, headers = headers, cookies = cookies)
 	if response.status_code == 200:
 		return startToDownloadImages(response.text)
-	print(u"访问%s错误:%d" % (url, response.response.status_code))
+	print(u"访问%s错误:%d" % (url, response.status_code))
 	return False
 
 if __name__ == '__main__':
